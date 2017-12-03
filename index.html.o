@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MathApp</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+	<!-- =========  Start Home Page  ============ -->
+
+	<div data-role="page" class="page" id="home-page">
+		<div data-role="header">
+		    <h1>Mobile Math Home</h1>
+		    <div data-role="navbar">
+		      <ul>
+		        <li><a href="#home-page">Home</a></li>
+		        <li><a href="#add-page">Add</a></li>
+		        <li><a href="#sub-page">Subtract</a></li>
+		        <li><a href="#mult-page">Multiply</a></li>
+		      </ul>
+		    </div>
+		  </div>
+		  <div role="main" class="ui-content">
+			<div id="add-start">
+				<div class="quest-header">
+					<h2>Welcome to Mobile Math</h2>
+					<h4>A simple app to practice basic math operations</h4>	
+				</div>
+				<div class="quest-box">
+					<!-- Example problem -->
+					<div class="ui-grid-d f1-prob">
+						<div class="ui-block-a">
+							<p>This</p>	
+						</div>
+						<div class="ui-block-b">
+							<p>&#43</p>	
+						</div>
+						<div class="ui-block-c">
+							<p>That</p>	
+						</div>
+						<div class="ui-block-d">
+							<p>=</p>	
+						</div>
+						<div class="ui-block-e">
+							<input id="" type="text" name="" value="those">
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+	  	<div data-role="navbar">
+	      	<ul>
+	        	<li><a href="#settings-page" class="ui-btn ui-icon-gear ui-btn-icon-left">Setting</a></li>
+	      	</ul>
+	    </div>
+	</div>
+
+	<!-- =========  End Home Page  =========== -->
+
+
+	
+	<!-- ===============  Start Settings Page  ============= -->
+	
+	<!-- Addtion, Subtraction, Mult -->
+	<!-- A: max arg, S: Max arg, M: Table #, Max arg, D: Table#, Max arg-->
+	<!-- Addition Landing -->
+	<div data-role="page" class="page" id="settings-page">
+		<div data-role="header">
+		    <h1>Mobile Math Settings</h1>
+		    <div data-role="navbar">
+		      	<ul>
+		        	<li><a href="#home-page">Home</a></li>
+		        	<li><a href="#add-page">Add</a></li>
+		        	<li><a href="#sub-page">Subtract</a></li>
+		        	<li><a href="#mult-page">Multiply</a></li>
+		        </ul>
+		    </div>
+	    </div>
+
+
+		<!-- Add default buttons for each setting operation -->
+
+
+	    <div date-role='main' class="ui-content">
+		    <div class="quest-header">
+				<div class="quest-box">
+					<div class="ui-grid-b">
+						<div class="legend-like">
+							<a href="#myPopup" data-rel="popup" data-transition="flip"
+							 class="ui-btn ui-btn-inline ui-icon-info  ui-btn-icon-notext ui-corner-all ui-shadow ">Info</a>
+							<div data-role="popup" id="myPopup">
+								<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+							    <p>Addition: Positive Integers, 1-50</p>
+							    <p>Subtraction: Positive Integers, 1-50</p>
+							  	<p>Multiplication:</p>
+							  	<p>Tables: 1-12</p>
+							  	<p>Multiplier: 1-9</p>
+							  	<p>Tables: 1-12</p>
+							  	<p>Dividend: 1-9</p>
+							</div>
+							<h3 >Addition</h3>	
+						</div>
+
+						<div class="ui-block-a">
+							<p title="Positive Integers - 1 to 50">Max Value:</p>	
+						</div>
+						<div class="ui-block-b">
+							<input id="a-max" type="number" min="1" max="50">	
+						</div>
+						<div class="ui-block-c">
+							<a id="a-set" class="ui-btn ui-btn-inline ui-btn-b">Set</a>
+						</div>
+					</div>
+					<div class="ui-grid-b">
+						<h3 class="legend-like">Subtraction</h3>
+						<div class="ui-block-a">
+							<p>Max Value:</p>	
+						</div>
+						<div class="ui-block-b">
+							<input id="s-max" type="number" min="1" max="50">	
+						</div>
+						<div class="ui-block-c">
+							<a id="s-set" class="ui-btn ui-btn-inline ui-btn-b"">Set</a>
+						</div>
+					</div>
+					<div class="ui-grid-b">
+						<h3 class="legend-like">Multiplication</h3>
+						<div class="ui-block-a arg">
+							<p>Mult Table:</p>	
+						</div>
+						<div class="ui-block-b arg">
+							<input id="m-table" type="number" max="12" min="2">	
+						</div>
+						<div class="ui-block-c">
+							<a id="m-t-set" class="ui-btn ui-btn-inline ui-btn-b"">Set</a>
+						</div>
+					</div>
+					<div class="ui-grid-b">
+						<div class="ui-block-a arg">
+							<p>Max Multiplier:</p>	
+						</div>
+						<div class="ui-block-b arg">
+							<input id="m-mult" type="number" max="9" min="2">	
+						</div>
+						<div class="ui-block-c">
+							<a id="m-m-set" class="ui-btn ui-btn-inline ui-btn-b">Set</a>
+						</div>
+					</div>
+					<div class="ui-grid-b">
+						<h3 class="legend-like">Division</h3>
+						<div class="ui-block-a arg">
+							<p>Div Table:</p>	
+						</div>
+						<div class="ui-block-b arg">
+							<input id="d-table" type="number" max="12" min="2">	
+						</div>
+						<div class="ui-block-c">
+							<a id="d-t-set" class="ui-btn ui-btn-inline ui-btn-b">Set</a>
+						</div>
+					</div>
+					<div class="ui-grid-b">
+						<div class="ui-block-a arg">
+							<p>Max Divisor:</p>	
+						</div>
+						<div class="ui-block-b arg">
+							<input id="d-div" type="number" max="9" min="2">	
+						</div>
+						<div class="ui-block-c">
+							<a id="d-m-set" class="ui-btn ui-btn-inline ui-btn-b">Set</a>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+		<div data-role='footer'>
+			<div data-role="navbar">
+		      	<ul>
+		        	<li><a href="#settings-page" class="ui-btn ui-icon-gear ui-btn-icon-left">Setting</a></li>
+		      	</ul>
+		    </div>	
+		</div>
+	</div>
+	
+	<!-- =====  End Settings Page ===== -->
+	
+	<!-- Settings instructions dialog -->
+
+	<div data-role="page" data-dialog="true" id="setting-inst">
+	  <div data-role="main" class="ui-content">
+	    <a href="#pageone">Go to Page One</a>
+	  </div>
+	</div>
+
+
+	<!-- ===============  Start Addition Page  ============= -->
+
+	<div data-role="page" class="page" id="add-page">
+		<div data-role="header">
+		    <h1>Mobile Math Addition</h1>
+		    <div data-role="navbar">
+		      <ul>
+		        <li><a href="#home-page">Home</a></li>
+		        <li><a href="#add-page">Add</a></li>
+		        <li><a href="#sub-page">Subtract</a></li>
+		        <li><a href="#mult-page">Multiply</a></li>
+		      </ul>
+		    </div>
+		  </div>
+		<div role="main" class="ui-content">
+
+			<div id="add-quest">
+				<div class="center" data-role="controlgroup"  data-type="horizontal" data-mini="true">
+					<a href="#addInfo" data-rel="popup" data-transition="flip" class="ui-btn ui-btn-inline ui-icon-info  ui-btn-icon-notext ui-corner-all ui-shadow ">Info</a>
+							<div data-role="popup" id="addInfo" class="center">
+								<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+							    <p>Score 20 points before the timer runs out!</p>
+							    <p>Press Start to begin a round.</p>
+							  	<p>Complete the problems and press 'Next' to get more problems.</p>
+							  	<p>Change difficulty on the Settings Page</p>
+							  	<p>If you reach 20 before the timer is up...</p>
+							  	<p>You Win!!!</p>
+							</div>
+					<a id="reset-add" class="ui-btn ui-corner-all ui-btn-b">Reset</a>
+					<a id="start-add" class="ui-btn ui-corner-all ui-btn-b">Start</a>
+				</div>
+				
+				<div class="quest-box">
+					<!-- Q1 -->
+					<div id="a-p1" class="ui-grid-d f1-prob a-input">
+						<div class="ui-block-a arg">
+							<input id="a-1-a1" readonly>	
+						</div>
+						<div class="ui-block-b center">
+							<div id="a-1-op"><p>+</p></div>	
+						</div>
+						<div class="ui-block-c arg">
+							<input id="a-1-a2" readonly>	
+						</div>
+						<div class="ui-block-d center">
+							<div id="a-1-e"><p>=</p></div>	
+						</div>
+						
+						<div class="ui-block-e">
+							<input class="answer" id="a-1-ans" type="number" name="add-ans" value="">
+						</div>
+					</div>
+
+					<!-- Q2 -->
+					<div id="a-p2" class="ui-grid-d f1-prob a-input">
+						<div class="ui-block-a">
+							<input id="a-2-a1" readonly>	
+						</div>
+						<div class="ui-block-b center">
+							<div id="a-2-op"><p>+</p></div>	
+						</div>
+						<div class="ui-block-c">
+							<input id="a-2-a2" readonly>
+						</div>
+						<div class="ui-block-d center">
+							<div id="a-2-e"><p>=</p></div>	
+						</div>
+
+						<div class="ui-block-e">
+							<input class="answer" id="a-2-ans" type="number" name="add-ans" value="">
+						</div>
+					</div>
+
+					<!-- Q3 -->
+					<div id="a-p3" class="ui-grid-d f1-prob a-input">
+						<div class="ui-block-a">
+							<input id="a-3-a1" readonly>	
+						</div>
+						<div class="ui-block-b center">
+							<div id="a-3-op"><p>+</p></div>	
+						</div>
+						<div class="ui-block-c">
+							<input id="a-3-a2" readonly>	
+						</div>
+						<div class="ui-block-d center">
+							<div id="a-3-e"><p>=</p></div>	
+						</div>
+
+						<div class="ui-block-e">
+							<input class="answer" id="a-3-ans" type="number" name="add-ans" value="">
+						</div>
+					</div>
+					<!-- Q4 -->
+					<div id="a-p4" class="ui-grid-d f1-prob a-input">
+						<div class="ui-block-a">
+							<input id="a-4-a1" readonly>	
+						</div>
+						<div class="ui-block-b center">
+							<div id="a-4-op"><p>+</p></div>	
+						</div>
+						<div class="ui-block-c">
+							<input id="a-4-a2" readonly>	
+						</div>
+						<div class="ui-block-d center">
+							<div id="a-4-e"><p>=</p></div>	
+						</div>
+
+						<div class="ui-block-e">
+							<input class="answer" id="a-3-ans" type="number" name="add-ans" value="">
+						</div>
+					</div>
+					
+					<div class="">
+						<div class="time-disp">
+							<label for="a-time">Time:</label>
+							<input id="a-time" readonly>
+						</div>
+						<div class="score-disp ">
+							<label for='a-score'>Score:</label>
+							<input id='a-score' readonly>
+						</div>
+					</div>	
+					
+				</div>
+				<div class="center" data-role="controlgroup" data-mini="true">
+					<a href="" id="add-check" class="ui-btn ui-btn-b ui-btn-inline">Next...</a>	
+				</div>
+					
+			</div>
+		</div>
+		<div data-role="navbar">
+	      	<ul>
+	        	<li><a href="#settings-page" class="ui-btn ui-icon-gear ui-btn-icon-left">Setting</a></li>
+	      	</ul>
+	    </div>
+
+	    <!-- Add Success Popup -->
+		<div id="addSuccessPopup" data-role="popup" data-transition='pop' class="center">
+			<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+			<h2>Congratulations!!!</h2>
+			<p>You finished before the timer ran out!</p>
+			<h3>Good Job!</h3>
+		</div>
+
+		<!-- Add Fail Popup -->
+		<div id="addFailPopup" data-role="popup" class="center">
+			<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+			<h2>Sorry!!!</h2>
+			<p>You didn't finished before the timer ran out!</p>
+			<h3>Try Try Again...</h3>
+		</div>
+
+	</div>
+
+	<!-- ========  End Addition Page ======== -->
+
+
+	<!-- ===============  Start Audio content  ============= -->
+
+	<div data-role='content'>
+		<audio id="wand">
+			<source src="audio/wand_short.aiff" type="">
+			<source src="audio/wand_short.wav" type="">
+			<source src="audio/wand_short.mp3" type="">
+			<source src="audio/wand_short.ogg" type="">
+			<p> Your browser does not support html5 audio</p>
+		</audio>
+	</div>
+	<div data-role='content'>
+		<audio id="boing">
+			<source src="audio/boing.aiff" type="">
+			<source src="audio/boing.wav" type="">
+			<source src="audio/boing.mp3" type="">
+			<source src="audio/boing.ogg" type="">
+			<p> Your browser does not support html5 audio</p>
+		</audio>
+	</div>
+	<div data-role='content'>
+		<audio id="ting">
+			<source src="audio/ting.aiff" type="">
+			<source src="audio/ting.wav" type="">
+			<source src="audio/ting.mp3" type="">
+			<source src="audio/ting.ogg" type="">
+			<p> Your browser does not support html5 audio</p>
+		</audio>
+	</div>
+	<div data-role='content'>
+		<audio id="error">
+			<source src="audio/error.aiff" type="">
+			<source src="audio/error.wav" type="">
+			<source src="audio/error.mp3" type="">
+			<source src="audio/error.ogg" type="">
+			<p> Your browser does not support html5 audio</p>
+		</audio>
+	</div>
+	<div data-role="content">
+		<audio id="kid-cheer">
+			<source src="audio/kids_cheer.aiff" type="">
+			<source src="audio/kids_cheer.wav" type="">
+			<source src="audio/kids_cheer.mp3" type="">
+			<source src="audio/kids_cheer.ogg" type="">
+			<p> Your browser does not support html5 audio</p>
+		</audio>
+	</div>
+	<div data-role="content">
+		<audio id="foghorn">
+			<source src="audio/foghorn.aiff" type="">
+			<source src="audio/foghorn.wav" type="">
+			<source src="audio/foghorn.mp3" type="">
+			<source src="audio/foghorn.ogg" type="">
+			<p> Your browser does not support html5 audio</p>
+		</audio>
+	</div>
+
+	<!-- ===============  End Audio content  ============= -->
+	
+	
+</body>
+</html>

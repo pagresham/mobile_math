@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>timer</title>
+	<style type="text/css">
+	/*	#me {
+			display: none;
+		}*/ 
+	</style>
+</head>
+<body>
+	<div>
+		<div id="goTime">00:<span id="timer">00</span></div>
+		<button onclick="go()" id="go">Go!</button>
+		<p id="me">Times up!!!</p>
+	</div>
+
+
+	<script type="text/javascript">
+		var t = 6;
+
+		document.querySelector('#me').style.display = 'none';
+		function go() {
+			document.querySelector('#me').style.display = 'none';
+			t--;
+			if(t<10){
+				document.getElementById('timer').innerHTML = '0'+t
+			}else{
+				document.getElementById('timer').innerHTML = t;	}
+			if(t<1){
+				document.querySelector('#me').style.display = 'block';
+				t=6;
+			}else {
+				setTimeout(go,1000) }
+		}
+		// Str=
+	</script>
+
+
+</body>
+</html>

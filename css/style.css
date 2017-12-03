@@ -1,0 +1,115 @@
+/**
+ * Style Sheet for MobileMath application
+ * @author Pierce Gresham - 5/17
+ */
+.quest-header {
+  text-align: center; }
+
+.side-pad-10 {
+  padding: 0 2em; }
+
+.f1-prob {
+  padding: 10px 0; }
+
+.ui-content {
+  height: 520px;
+  background-color: DarkSeaGreen; }
+
+.ui-btn {
+  border-radius: 5px; }
+
+.set-btn {
+  background-color: red; }
+
+.quest-box {
+  height: 400px;
+  padding: 0 2em; }
+
+.btn-cent {
+  width: 33%;
+  margin: auto; }
+
+.eMessage {
+  color: red; }
+
+.sMessage {
+  color: green; }
+
+.score-disp {
+  float: right;
+  width: 20%;
+  display: inline-block; }
+
+.time-disp {
+  float: left;
+  width: 4em;
+  display: inline-block; }
+
+#a-score {
+  display: inline-block;
+  background-color: white; }
+
+.score-label {
+  display: inline-block; }
+
+.center {
+  text-align: center; }
+
+.mar-auto {
+  margin: 0 auto; }
+
+.legend-like {
+  border-bottom: 1px solid white;
+  padding-bottom: .25em; }
+
+.center {
+  text-align: center; }
+
+.icon-container {
+  display: inline-block; }
+
+.icon_block {
+  padding: .5em; }
+  .icon_block img {
+    max-width: 100%; }
+
+.large-text {
+  font-size: 2em;
+  background-color: red;
+  color: red; }
+
+a.ui-link.ui-btn.large-text {
+  font-size: 1em;
+  padding: 6.5px 12px; }
+
+.img-sel {
+  display: inline-block;
+  max-width: 100%;
+  width: 15%;
+  white-space: nowrap; }
+  .img-sel img {
+    width: 100%;
+    margin-left: 15px; }
+
+.nowrap {
+  white-space: nowrap; }
+
+.create-user-header {
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  font-weight: bold; }
+
+/** This keeps the pages centered on a larger screen */
+@media only screen and (min-width: 960px) {
+  .ui-page {
+    width: 960px !important;
+    margin: 0 auto !important;
+    position: relative !important;
+    border-right: 5px #666 outset !important;
+    border-left: 5px #666 outset !important; } }
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
+  background-color: #eee; }
+
+/*# sourceMappingURL=style.css.map */
