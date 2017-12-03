@@ -4,7 +4,10 @@
  */
 
 body, html {
-
+	
+}
+body.ui-mobile-viewport {
+	background-color: #111;
 }
 // div[data-role='page'] {
 // 	// max-height: 300px;
@@ -12,7 +15,7 @@ body, html {
 // 	margin: 0 auto;
 // }
 .ui-page, .ui-mobile {
-
+	
 }
 .quest-header {
 	text-align: center;
@@ -145,7 +148,7 @@ a.ui-link.ui-btn.large-text{
 /** This keeps the pages centered on a larger screen */
 @media only screen and (min-width: 960px){
         .ui-page {
-            width: 960px !important;
+            width: 500px !important;
             margin: 0 auto !important;
             position: relative !important;
             border-right: 5px #666 outset !important;
@@ -154,4 +157,13 @@ a.ui-link.ui-btn.large-text{
     }
 .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
 	background-color: #eee;
+}
+
+.ui-page {
+	background-color: #333;
+	// width: 500px !important;
+ //            margin: 0 auto !important;
+ //            position: relative !important;
+ //            border-right: 5px #666 outset;
+ //            border-left: 5px #666 outset;
 }
