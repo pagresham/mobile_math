@@ -24,8 +24,8 @@
 
 <?PHP
 session_start();
-require("db_helpers/config.php");
-require("db_helpers/connect.php");
+// require("db_helpers/config.php");
+// require("db_helpers/connect.php");
 include "mobile_math_helpers.php";
 $username = $password1 = $password2 = $totem = $hashedPassword = $success = "";
 $errors = array();
